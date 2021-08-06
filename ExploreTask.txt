@@ -1,0 +1,10 @@
+wait() -  Tells the current thread to release the lock and go to sleep until some other thread enters the same monitor and calls notify().
+
+
+notify() -  Wakes up the single thread that is waiting on this object's monitor.
+
+
+notifyAll() - It wakes up all the threads that called wait() on the same object.
+
+Following above definition, we can conclude that wait() and notify() work at the monitor level and monitor is assigned to an object not to a particular thread. Hence, wait() and notify() methods are defined in Object class rather than Thread class.If wait() and notify() were on the Thread instead then each thread would have to know the status of every other thread and there is no way to know thread1 that thread2 was waiting for any resource to access.Hence, notify, wait, notifyAll methods are defined in object class in Java.
+
