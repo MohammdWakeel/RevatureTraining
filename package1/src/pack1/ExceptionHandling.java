@@ -12,11 +12,11 @@ public class ExceptionHandling {
 	}
 	
 	public boolean isvalidMail(String mail) {
-		if(mail.matches("[a-z]{1}")){
+		if(mail.matches("[a-z]{1}[a-z0-9]{4,20}@[a-z].com")){
 			return true;
 		}
 		else {
-			
+			throw new InvalidMailException("Entered Mail "+mail+" is invalid");
 		}
 	}
 
